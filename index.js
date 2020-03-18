@@ -2,13 +2,13 @@ const path = require('path')
 const async = require('async')
 const newman = require('newman')
 
-const PARALLEL_RUN_COUNT = 10
+const PARALLEL_RUN_COUNT = 4 
 
 const parametersForTestRun = {
     collection: path.join(__dirname, 'postman/ImmuDB_api_test.postman_collection.json'), // your collection
     environment: path.join(__dirname, 'postman/local.postman_environment.json'), //your env
-    reporters: 'progress', //cli
-    iterationCount: 100,
+    reporters: 'cli', //cli,progress,emojitrain
+    iterationCount: 10,
     color: 'on'
 };
 

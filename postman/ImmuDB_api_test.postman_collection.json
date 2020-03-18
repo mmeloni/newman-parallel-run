@@ -1,0 +1,1803 @@
+{
+	"info": {
+		"_postman_id": "67aae40c-b6ed-4f55-8796-6b7b7c546218",
+		"name": "ImmuDB api test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Safe Set1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dc886606-5fcc-4d28-9461-12fbfc7a2f43",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kv\": {\n         \"key\": \"a2V5MQ==\",\n\t     \"value\": \"dmFsMQ==\"\n\t}\n}\n"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item/safe",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item",
+						"safe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kv\": {\n        \"key\": \"<byte>\",\n        \"value\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item/safe",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item",
+								"safe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Set2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d41c43cb-2fdb-4b07-92f1-2b1185f8ac29",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kv\": {\n         \"key\": \"a2V5Mg==\",\n\t     \"value\": \"dmFsMg==\"\n\t}\n}\n"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item/safe",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item",
+						"safe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kv\": {\n        \"key\": \"<byte>\",\n        \"value\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item/safe",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item",
+								"safe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Set3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e187c999-2cab-4949-bada-f0e595c137cd",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kv\": {\n         \"key\": \"a2V5Mw==\",\n\t     \"value\": \"dmFsMw==\"\n\t}\n}\n"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item/safe",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item",
+						"safe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"kv\": {\n        \"key\": \"<byte>\",\n        \"value\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item/safe",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item",
+								"safe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Get1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea3efbd9-8ff0-4780-a541-36acfe32d4d0",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n        \"key\": \"a2V5MQ==\"\n\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item",
+						"safe",
+						"get"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": {\n        \"key\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item",
+								"safe",
+								"get"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"item\": {\n  \"key\": \"<byte>\",\n  \"value\": \"<byte>\",\n  \"index\": \"<uint64>\"\n },\n \"proof\": {\n  \"leaf\": \"<byte>\",\n  \"index\": \"<uint64>\",\n  \"root\": \"<byte>\",\n  \"at\": \"<uint64>\",\n  \"inclusionPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ],\n  \"consistencyPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ]\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Get2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a6054808-ed26-44da-b558-114cee87bd89",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"key\": \"a2V5Mg==\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item",
+						"safe",
+						"get"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": {\n        \"key\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item",
+								"safe",
+								"get"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"item\": {\n  \"key\": \"<byte>\",\n  \"value\": \"<byte>\",\n  \"index\": \"<uint64>\"\n },\n \"proof\": {\n  \"leaf\": \"<byte>\",\n  \"index\": \"<uint64>\",\n  \"root\": \"<byte>\",\n  \"at\": \"<uint64>\",\n  \"inclusionPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ],\n  \"consistencyPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ]\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Get Fail Key not Exists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74233cc5-de0e-4b53-93ed-b31f599eda41",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"key\": \"a2V5bm90ZXhpc3Rz\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item",
+						"safe",
+						"get"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": {\n        \"key\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item",
+								"safe",
+								"get"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"item\": {\n  \"key\": \"<byte>\",\n  \"value\": \"<byte>\",\n  \"index\": \"<uint64>\"\n },\n \"proof\": {\n  \"leaf\": \"<byte>\",\n  \"index\": \"<uint64>\",\n  \"root\": \"<byte>\",\n  \"at\": \"<uint64>\",\n  \"inclusionPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ],\n  \"consistencyPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ]\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Reference1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43b4e519-19f6-4de2-8445-e23cd965deb8",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ro\": {\n        \"reference\":  \"dGFnMQ==\",\n         \"key\": \"a2V5MQ==\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"safe",
+						"reference"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ro\": {\n        \"reference\": {\n            \"key\": \"<byte>\"\n        },\n        \"key\": {\n            \"key\": \"<byte>\"\n        }\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"safe",
+								"reference"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Reference3 fail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "288b1bdc-853e-4832-99e6-0861c1510661",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ro\": {\n        \"reference\":  \"dGFnMg==\",\n         \"key\": \"notB64\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"safe",
+						"reference"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ro\": {\n        \"reference\": {\n            \"key\": \"<byte>\"\n        },\n        \"key\": {\n            \"key\": \"<byte>\"\n        }\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"safe",
+								"reference"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Reference2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "342159ea-66dc-4967-aeda-5c301d1ae28d",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ro\": {\n        \"reference\":  \"dGFnMg==\",\n         \"key\": \"a2V5Mg==\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"safe",
+						"reference"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ro\": {\n        \"reference\": {\n            \"key\": \"<byte>\"\n        },\n        \"key\": {\n            \"key\": \"<byte>\"\n        }\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"safe",
+								"reference"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Reference4 fail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6d3e515c-9c8b-472e-8d9f-80cca4367604",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ro\": {\n        \"reference\": \"dGFnMg==\",\n            \"key\": \"notB64\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"safe",
+						"reference"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ro\": {\n        \"reference\": {\n            \"key\": \"<byte>\"\n        },\n        \"key\": {\n            \"key\": \"<byte>\"\n        }\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"safe",
+								"reference"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Reference fail 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc237c95-d8b3-45e5-a146-dad7a28d17d1",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ro\": {\n        \"reference\":  \"dGFnMg==\",\n\t\t\"key\": \"a2V5bm90ZXhpc3Rz\"\n     }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"safe",
+						"reference"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ro\": {\n        \"reference\": {\n            \"key\": \"<byte>\"\n        },\n        \"key\": {\n            \"key\": \"<byte>\"\n        }\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/safe/reference",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"safe",
+								"reference"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Get On Reference",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a6054808-ed26-44da-b558-114cee87bd89",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"key\": \"dGFnMg==\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item",
+						"safe",
+						"get"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": {\n        \"key\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item",
+								"safe",
+								"get"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"item\": {\n  \"key\": \"<byte>\",\n  \"value\": \"<byte>\",\n  \"index\": \"<uint64>\"\n },\n \"proof\": {\n  \"leaf\": \"<byte>\",\n  \"index\": \"<uint64>\",\n  \"root\": \"<byte>\",\n  \"at\": \"<uint64>\",\n  \"inclusionPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ],\n  \"consistencyPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ]\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Z Add 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7cd4c4c-a378-44ee-b6c0-43d70cf00d71",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"zopts\": {\n        \"set\": \"c2V0MQ==\",\n        \"score\": 15.5,\n        \"key\": \"a2V5MQ==\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/safe/zadd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"safe",
+						"zadd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"zopts\": {\n        \"set\": \"<byte>\",\n        \"score\": \"<double>\",\n        \"key\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/safe/zadd",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"safe",
+								"zadd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Z Add Fail 1 key not exists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b3db1f5a-6410-4a5f-a9c8-637e4231ebd8",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"zopts\": {\n        \"set\": \"c2V0MQ==\",\n        \"score\": 215.25,\n        \"key\": \"a2V5bm90ZXhpc3Rz\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/safe/zadd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"safe",
+						"zadd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"zopts\": {\n        \"set\": \"<byte>\",\n        \"score\": \"<double>\",\n        \"key\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/safe/zadd",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"safe",
+								"zadd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Z Add 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fb2915f5-b2a0-4a6d-bdf0-a9505d264526",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"zopts\": {\n        \"set\": \"c2V0MQ==\",\n        \"score\": 34515.533,\n        \"key\": \"a2V5Mg==\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/safe/zadd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"safe",
+						"zadd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"zopts\": {\n        \"set\": \"<byte>\",\n        \"score\": \"<double>\",\n        \"key\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/safe/zadd",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"safe",
+								"zadd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"leaf\": \"<byte>\",\n \"index\": \"<uint64>\",\n \"root\": \"<byte>\",\n \"at\": \"<uint64>\",\n \"inclusionPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ],\n \"consistencyPath\": [\n  \"<byte>\",\n  \"<byte>\"\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Z Scan 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2fccfeb1-d856-4273-9291-ea8e731d09cc",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"set\": \"c2V0MQ==\",\n    \"limit\": 0,\n    \"reverse\": false\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/zscan",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"zscan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"set\": \"<byte>\",\n    \"offset\": \"<byte>\",\n    \"limit\": \"<uint64>\",\n    \"reverse\": \"<boolean>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/zscan",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"zscan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"items\": [\n  {\n   \"key\": \"<byte>\",\n   \"value\": \"<byte>\",\n   \"index\": \"<uint64>\"\n  },\n  {\n   \"key\": \"<byte>\",\n   \"value\": \"<byte>\",\n   \"index\": \"<uint64>\"\n  }\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Z Scan Reverse",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2bee40f-f075-433d-a239-ec48c5a523ba",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"set\": \"c2V0MQ==\",\n    \"limit\": 0,\n    \"reverse\": true\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/zscan",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"zscan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"set\": \"<byte>\",\n    \"offset\": \"<byte>\",\n    \"limit\": \"<uint64>\",\n    \"reverse\": \"<boolean>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/zscan",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"zscan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"items\": [\n  {\n   \"key\": \"<byte>\",\n   \"value\": \"<byte>\",\n   \"index\": \"<uint64>\"\n  },\n  {\n   \"key\": \"<byte>\",\n   \"value\": \"<byte>\",\n   \"index\": \"<uint64>\"\n  }\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Z Scan Set Not exists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "39ff89c1-9f83-412d-8ad7-2a03b9e3280c",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"set\": \"c2V0bm90Zm91bmQ=\",\n    \"limit\": 0,\n    \"reverse\": false\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/zscan",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"zscan"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"set\": \"<byte>\",\n    \"offset\": \"<byte>\",\n    \"limit\": \"<uint64>\",\n    \"reverse\": \"<boolean>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/zscan",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"zscan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"items\": [\n  {\n   \"key\": \"<byte>\",\n   \"value\": \"<byte>\",\n   \"index\": \"<uint64>\"\n  },\n  {\n   \"key\": \"<byte>\",\n   \"value\": \"<byte>\",\n   \"index\": \"<uint64>\"\n  }\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Set",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b0421e6c-07c7-4b0d-8fe9-0d6705fd8db5",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"a2V5NQ==\",\n    \"value\": \"dmFsNQ==\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": \"<byte>\",\n    \"value\": \"<byte>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"index\": \"<uint64>\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Safe Get on Set",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea3efbd9-8ff0-4780-a541-36acfe32d4d0",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verified\", function () {",
+							"    pm.expect(pm.response.json().verified).to.eql(true);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"key\": \"a2V5NQ==\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item",
+						"safe",
+						"get"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": {\n        \"key\": \"<byte>\"\n    },\n    \"rootIndex\": {\n        \"index\": \"<uint64>\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item/safe/get",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item",
+								"safe",
+								"get"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"item\": {\n  \"key\": \"<byte>\",\n  \"value\": \"<byte>\",\n  \"index\": \"<uint64>\"\n },\n \"proof\": {\n  \"leaf\": \"<byte>\",\n  \"index\": \"<uint64>\",\n  \"root\": \"<byte>\",\n  \"at\": \"<uint64>\",\n  \"inclusionPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ],\n  \"consistencyPath\": [\n   \"<byte>\",\n   \"<byte>\"\n  ]\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "Set2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b0421e6c-07c7-4b0d-8fe9-0d6705fd8db5",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"a2V5NQ==\",\n    \"value\": \"dmFsNQ==\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/item",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"item"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": \"<byte>\",\n    \"value\": \"<byte>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/item",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"item"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"index\": \"<uint64>\"\n}"
+				}
+			]
+		},
+		{
+			"name": "History",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/immurestproxy/history/a2V5NQ==",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"immurestproxy",
+						"history",
+						"a2V5NQ=="
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A successful response.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/immurestproxy/history/:key",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"immurestproxy",
+								"history",
+								":key"
+							],
+							"variable": [
+								{
+									"key": "key"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"items\": [\n  {\n   \"key\": \"<byte>\",\n   \"value\": \"<byte>\",\n   \"index\": \"<uint64>\"\n  },\n  {\n   \"key\": \"<byte>\",\n   \"value\": \"<byte>\",\n   \"index\": \"<uint64>\"\n  }\n ]\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
